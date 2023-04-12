@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.rasul0301'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:6.12.4",
+            "org.junit.jupiter:junit-jupiter:5.9.2"
+    )
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
