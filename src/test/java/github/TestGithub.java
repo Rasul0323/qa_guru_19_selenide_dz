@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Selenide.*;
 public class TestGithub extends TestBase{
     @org.junit.jupiter.api.Test
     void findSoftAssertions(){
-        Configuration.holdBrowserOpen=true;
         open("https://github.com/");
         $("[placeholder='Search GitHub']").setValue("selenide").pressEnter();
         $$ ("ul.repo-list li").first().$("a").click();
